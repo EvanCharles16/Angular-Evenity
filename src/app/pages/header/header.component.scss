@@ -1,3 +1,12 @@
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: whitesmoke;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#ff001f 50%, rgba(255, 0, 31, 0.85) 120%);
+  border-radius: 6px;
+}
+
 .main-background {
   background: url(../../../assets/backgroundhome.jpg) no-repeat;
   position: relative;
@@ -9,4 +18,24 @@
     color: white;
     font-weight: 700;
   }
+}
+
+.contQuotes {
+  h3.quotes1 {
+    color: white !important;
+    font-size: 2.2rem !important;
+    font-weight: 500 !important;
+  }
+  h3.quotes2 {
+    color: white !important;
+    font-size: 2rem !important;
+    font-weight: 400 !important;
+  }
+}
+
+.buttonMore {
+  color: white !important;
+  background: linear-gradient(90deg, #ff001f 50%, rgba(255, 0, 31, 0.85) 120%);
+  border-color: #ff001f !important;
+  padding: 0.7rem !important;
 }

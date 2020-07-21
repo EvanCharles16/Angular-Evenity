@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+span {
+  display: inline-block;
+  color: #000;
+  font-size: 3rem;
+  letter-spacing: 10px;
+  animation: animate 2s linear infinite;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes animate {
+  20% {
+    transform: translateY(-70%);
+  }
+  40% {
+    transform: translateY(0%);
+  }
+}
