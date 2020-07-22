@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './pages/header/header.component';
 import { CategoryComponent } from './pages/category/category.component';
 import { EventComponent } from './pages/event/event.component';
+import { CreateEventComponent } from './pages/create-event/create-event.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { EventComponent } from './pages/event/event.component';
     HeaderComponent,
     CategoryComponent,
     EventComponent,
+    CreateEventComponent,
   ],
   imports: [
     BrowserModule,
