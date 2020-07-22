@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { RouterModule, Routes } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -7,6 +10,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './pages/header/header.component';
 import { CategoryComponent } from './pages/category/category.component';
+import { EventComponent } from './pages/event/event.component';
 
 @NgModule({
   declarations: [
@@ -15,8 +19,15 @@ import { CategoryComponent } from './pages/category/category.component';
     FooterComponent,
     HeaderComponent,
     CategoryComponent,
+    EventComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    CarouselModule, //Carousel
+    RouterModule, //Carousel
+    BrowserAnimationsModule, //Carousel
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
