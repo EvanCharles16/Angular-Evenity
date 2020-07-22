@@ -10,18 +10,20 @@
     aria-controls="navbarSupportedContent"
     aria-expanded="false"
     aria-label="Toggle navigation"
-    (click)="toggleNavbar()"
   >
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div
-    class="collapse navbar-collapse"
-    id="navbarSupportedContent"
-    [ngClass]="{ show: navbarOpen }"
-  >
-    <button class="btn btn-danger ml-auto mr-5 pr-3 pl-3 font-weight-bold">
+  <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+    <button
+      class="btn btn-danger ml-auto mr-5 pr-3 pl-3 font-weight-bold"
+      data-toggle="modal"
+      data-target="#exampleModalCenter"
+    >
       <i class="fa fa-plus mr-3"></i>Create Event
     </button>
+    <div class="text-left">
+      <app-create-event></app-create-event>
+    </div>
   </div>
 </nav>
