@@ -29,72 +29,6 @@
           </div>
 
           <div class="form-group">
-            <select class="custom-select">
-              <option selected>Education</option>
-              <option value="1">Music</option>
-              <option value="2">Art</option>
-              <option value="3">Film</option>
-              <option value="4">Food & Drinks</option>
-              <option value="5">Festival</option>
-              <option value="6">Fashion</option>
-              <option value="7">Sport</option>
-              <option value="8">Nightlife</option>
-              <option value="9">Charity</option>
-              <option value="10">Others</option>
-            </select>
-            <small class="form-text text-muted">Your Event Category</small>
-          </div>
-
-          <div class="form-group">
-            <input
-              type="number"
-              class="form-control"
-              placeholder="Max People"
-            />
-            <small class="form-text text-muted"
-              >Limit People for your event</small
-            >
-          </div>
-
-          <div class="form-group">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Organizer Name"
-            />
-            <small class="form-text text-muted">Organizer Name</small>
-          </div>
-
-          <div class="form-group">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Responsible Name"
-            />
-            <small class="form-text text-muted">Responsible Name</small>
-          </div>
-
-          <div class="form-group">
-            <textarea
-              class="form-control"
-              rows="3"
-              placeholder="Description"
-            ></textarea>
-            <small class="form-text text-muted"
-              >Description for your event</small
-            >
-          </div>
-
-          <div class="form-group">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Venue Location"
-            />
-            <small class="form-text text-muted">Your Event Location</small>
-          </div>
-
-          <div class="form-group">
             <input type="time" class="form-control" />
             <small class="form-text text-muted">What time is your event?</small>
           </div>
@@ -112,17 +46,17 @@
           </div>
 
           <div class="form-group">
-            <input type="file" class="form-control" />
-            <small class="form-text text-muted">Your Event's Image</small>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Venue Location"
+            />
+            <small class="form-text text-muted">Your Event Location</small>
           </div>
 
           <div class="form-group">
-            <textarea
-              class="form-control"
-              rows="3"
-              placeholder="Detail"
-            ></textarea>
-            <small class="form-text text-muted">Your Event Detail</small>
+            <input type="file" class="form-control" />
+            <small class="form-text text-muted">Your Event's Image</small>
           </div>
         </form>
       </div>
@@ -130,12 +64,12 @@
         <button type="button" class="btn btn-secondary" data-dismiss="modal">
           Close
         </button>
-        <button type="button" class="btn btn-danger">
-          Add Event
-        </button>
-        <!-- <button type="button" class="btn btn-danger" (click)="onCreatePost()">
+        <!-- <button type="button" class="btn btn-danger">
           Add Event
         </button> -->
+        <button type="button" class="btn btn-danger" (click)="onCreatePost()">
+          Add Event
+        </button>
       </div>
     </div>
   </div>

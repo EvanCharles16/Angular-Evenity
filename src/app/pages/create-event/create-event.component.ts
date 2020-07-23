@@ -7,28 +7,26 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./create-event.component.scss'],
 })
 export class CreateEventComponent implements OnInit {
+  private baseUrl = 'https://api.indrakawasan.com';
+
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {}
 
-  onCreatePost(postData: {
-    title: string;
-    category: string;
-    maxPeople: number;
-    organizerName: string;
-    responsibleName: string;
-    description: string;
-    location: string;
-    time: number;
-    date: number;
-    price: number;
-    imageEvent: string;
-    detail: string;
-  }) {
-    this.http
-      .post('https://api.indrakawasan.com/event/create', postData)
-      .subscribe((responseData) => {
-        console.log(responseData);
-      });
-  }
+  onCreatePost() {}
+
+  // onCreatePost(postData: {
+  //   title: string;
+  //   time: number;
+  //   date: number;
+  //   price: number;
+  //   location: string;
+  //   imageEvent: string;
+  // }) {
+  //   this.http
+  //     .post(`${this.baseUrl}/event/create`, postData)
+  //     .subscribe((responseData) => {
+  //       console.log(responseData);
+  //     });
+  // }
 }

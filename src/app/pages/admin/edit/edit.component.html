@@ -1,3 +1,71 @@
-<button class="btn btn-warning">
+<button class="btn btn-warning" data-toggle="modal" data-target="#modalEdit">
   <i class="fa fa-pencil-square-o mr-2"></i>Edit
 </button>
+
+<div
+  class="modal fade"
+  id="modalEdit"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-warning">
+        <h5
+          class="modal-title text-white font-weight-bold"
+          id="exampleModalCenterTitle"
+        >
+          Edit Event
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Title" />
+            <small class="form-text text-muted">Your Event Title Name</small>
+          </div>
+
+          <div class="form-group">
+            <input type="time" class="form-control" />
+            <small class="form-text text-muted">What time is your event?</small>
+          </div>
+
+          <div class="form-group">
+            <input type="date" class="form-control" />
+            <small class="form-text text-muted">When is your Event held?</small>
+          </div>
+
+          <div class="form-group">
+            <input type="number" class="form-control" placeholder="Price" />
+            <small class="form-text text-muted"
+              >How much is your event's cost?</small
+            >
+          </div>
+
+          <div class="form-group">
+            <input type="file" class="form-control" />
+            <small class="form-text text-muted">Your Event's Image</small>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-warning">
+          Edit Event
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
