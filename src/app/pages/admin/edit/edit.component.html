@@ -1,14 +1,10 @@
-<button class="btn btn-warning" data-toggle="modal" data-target="#modalEdit">
-  <i class="fa fa-pencil-square-o mr-2"></i>Edit
-</button>
-
 <div
   class="modal fade"
-  id="modalEdit"
   tabindex="-1"
   role="dialog"
   aria-labelledby="exampleModalCenterTitle"
   aria-hidden="true"
+  id="modalOpen"
 >
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
@@ -29,40 +25,87 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <div>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Title" />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Title"
+              name="title"
+              value="{{ form.title }}"
+              #title
+              id="title"
+              (input)="onChange(title.value, 'title')"
+            />
             <small class="form-text text-muted">Your Event Title Name</small>
           </div>
 
           <div class="form-group">
-            <input type="time" class="form-control" />
+            <input
+              type="text"
+              class="form-control"
+              name="time"
+              value="{{ form.time }}"
+              #time
+              id="time"
+              (input)="onChange(time.value, 'time')"
+            />
             <small class="form-text text-muted">What time is your event?</small>
           </div>
 
           <div class="form-group">
-            <input type="date" class="form-control" />
+            <input
+              type="text"
+              class="form-control"
+              name="date"
+              value="{{ form.date }}"
+              #date
+              id="date"
+              (input)="onChange(date.value, 'date')"
+            />
             <small class="form-text text-muted">When is your Event held?</small>
           </div>
 
           <div class="form-group">
-            <input type="number" class="form-control" placeholder="Price" />
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Price"
+              name="price"
+              value="{{ form.price }}"
+              #price
+              id="price"
+              (input)="onChange(price.value, 'price')"
+            />
             <small class="form-text text-muted"
               >How much is your event's cost?</small
             >
           </div>
 
           <div class="form-group">
-            <input type="file" class="form-control" />
-            <small class="form-text text-muted">Your Event's Image</small>
+            <input
+              type="text"
+              class="form-control"
+              name="imageEvent"
+              value="{{ form.imageEvent }}"
+              #imageEvent
+              id="imageEvent"
+              (input)="onChange(imageEvent.value, 'imageEvent')"
+            />
+            <small class="form-text text-muted">Your Event's Image(Url)</small>
           </div>
-        </form>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">
           Close
         </button>
-        <button type="button" class="btn btn-warning">
+        <button
+          type="button"
+          class="btn btn-warning"
+          (click)="onEditEvent()"
+          data-dismiss="modal"
+        >
           Edit Event
         </button>
       </div>

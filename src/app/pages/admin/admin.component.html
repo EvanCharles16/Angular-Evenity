@@ -35,10 +35,25 @@
             >
           </h6>
 
-          <app-edit class="mr-3 ml-3 mb-3"></app-edit>
+          <button
+            class="btn btn-warning"
+            data-toggle="modal"
+            (click)="onDisplay(event)"
+            data-target="#modalOpen"
+          >
+            <i class="fa fa-pencil-square-o mr-2"></i>Edit
+          </button>
+
           <app-delete></app-delete>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<app-edit
+  *ngIf="onDisplayModal"
+  [event]="selectedEvent"
+  class="mr-3 ml-3 mb-3"
+  [appearEvent]="appearEvent"
+></app-edit>
